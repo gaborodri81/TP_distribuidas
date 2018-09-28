@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import dto.AlumnoDto;
-import negocio.alumno.*;
+import negocio.*;
 
 public class Controlador {
 	
