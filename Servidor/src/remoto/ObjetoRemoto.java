@@ -1,4 +1,4 @@
-package remoto.alumno;
+package remoto;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;

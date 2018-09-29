@@ -5,7 +5,7 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
-import remoto.alumno.ObjetoRemoto;
+import remoto.ObjetoRemoto;
 
 public class Server {
 
