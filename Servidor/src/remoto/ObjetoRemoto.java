@@ -3,8 +3,8 @@ package remoto;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-import controlador.alumno.Controlador;
-import dto.AlumnoDto;
+//import controlador.alumno.Controlador;
+//import dto.AlumnoDto;
 import interfaces.alumno.*;
 import interfaces.alumno.InterfaceRemota;
 
@@ -19,7 +19,7 @@ public class ObjetoRemoto extends UnicastRemoteObject implements InterfaceRemota
 	public void altaAlumno(AlumnoDto dto) throws RemoteException {
 	
 		// new Objeto Negocio Alumno
-		new Controlador().altaAlumno(123, 1234);;
+	//	new Controlador().altaAlumno(123, 1234);;
 	}
 
 	/*@Override

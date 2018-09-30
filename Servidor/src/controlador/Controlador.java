@@ -1,4 +1,4 @@
-package controlador.alumno;
+package controlador;
 
 import java.util.ArrayList;
 import java.util.Collection;
