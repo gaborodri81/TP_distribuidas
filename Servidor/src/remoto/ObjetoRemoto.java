@@ -3,23 +3,27 @@ package remoto;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-//import controlador.alumno.Controlador;
-//import dto.AlumnoDto;
-import interfaces.alumno.*;
-import interfaces.alumno.InterfaceRemota;
+import controlador.Controlador;
+import dto.JugadorDTO;
+import interfaces.InterfaceRemota;
 
 
 public class ObjetoRemoto extends UnicastRemoteObject implements InterfaceRemota {
 
-	private static final long serialVersionUID = 7432516509801597745L;
+//	private static final long serialVersionUID = 7432516509801597745L;
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	public ObjetoRemoto() throws RemoteException {}
 
-
-	public void altaAlumno(AlumnoDto dto) throws RemoteException {
-	
-		// new Objeto Negocio Alumno
-	//	new Controlador().altaAlumno(123, 1234);;
+	@Override
+	public void altaJugador(JugadorDTO dto) throws RemoteException {
+		// TODO Auto-generated method stub
+		Controlador contr = new Controlador();
+		contr.altaJugador(dto);
 	}
 
 	/*@Override

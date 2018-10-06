@@ -15,12 +15,12 @@ public class Server {
 
 	private void inicializar() throws RemoteException {
 		
-		interfaces.alumno.InterfaceRemota or = new ObjetoRemoto();
+		interfaces.InterfaceRemota or = new ObjetoRemoto();
 
 		
 		try {
 			LocateRegistry.createRegistry(1099);
-			Naming.rebind("//127.0.0.1/altaAlumno", or);
+			Naming.rebind("//127.0.0.1/altaJugador", or);
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

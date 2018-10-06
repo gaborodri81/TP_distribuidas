@@ -7,6 +7,19 @@ public class Mazo {
 	private Collection<Carta> CartasPendientas;
 	private Collection<Carta> cartasRepartidas;
 	
+	public Collection<Carta> getCartasPendientas() {
+		return CartasPendientas;
+	}
+	public void setCartasPendientas(Collection<Carta> cartasPendientas) {
+		CartasPendientas = cartasPendientas;
+	}
+	public Collection<Carta> getCartasRepartidas() {
+		return cartasRepartidas;
+	}
+	public void setCartasRepartidas(Collection<Carta> cartasRepartidas) {
+		this.cartasRepartidas = cartasRepartidas;
+	}
+	
 	
 	
 	

@@ -1,6 +1,6 @@
-package negocio;
+package dto;
 
-public class Categoria {
+public class CategoriaDTO {
 
 	private String tipo;
 	private String nombre;

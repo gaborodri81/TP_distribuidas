@@ -3,71 +3,42 @@ package controlador;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import dto.AlumnoDto;
+import dto.JugadorDTO;
 import negocio.*;
 
 public class Controlador {
+
+	private Collection<Jugador> jugadores;
+
+	public Controlador() {
+
+		jugadores = new ArrayList<>();
+	}
+
+	public Collection<Jugador> getJugadores() {
+		return jugadores;
+	}
+
 	
-	private Collection<Alumno> alumnos;
-	private Collection<Profesor> profesor;
-	private Collection<Materia> materias;
-	private Collection<Curso> cursos;
+	public void altaJugador(JugadorDTO dto) {
+		Jugador jugador = new Jugador();
+		jugador.setId_jugador(dto.getId_jugador());
 
-	public Controlador (){
+		jugadores.add(jugador);
+		jugador.save(dto);
+
+		System.out.println("Nuevo jugador:" + dto.getNickname());
 		
-		alumnos = new ArrayList<>();
-		profesor = new ArrayList<>();
-		materias = new ArrayList<>();
-		cursos = new ArrayList<>();
-//		alumno= new ArrayList<>();
-	}
-	public Collection<Alumno> getAlumnos() {
-		return alumnos;
 	}
 
-	public void setAlumnos(Collection<Alumno> alumnos) {
-		this.alumnos = alumnos;
-	}
-
-	public Collection<Profesor> getProfesor() {
-		return profesor;
-	}
-
-	public void setProfesor(Collection<Profesor> profesor) {
-		this.profesor = profesor;
-	}
-
-	public Collection<Materia> getMaterias() {
-		return materias;
-	}
-
-	public void setMaterias(Collection<Materia> materias) {
-		this.materias = materias;
-	}
-
-	public Collection<Curso> getCursos() {
-		return cursos;
-	}
-
-	public void setCursos(Collection<Curso> cursos) {
-		this.cursos = cursos;
-	}
-
-	public void altaAlumno (AlumnoDto dto){
-		
-		new Alumno().save();
-					
-System.out.println("Nuevo alumno:" + dto.getLegajo());
-	}
-	
-	public Alumno obtener (int legajo){
-		Alumno alumno = null;
-		for (Alumno o : alumnos){
-			if (o.getLegajo() == legajo){
-				alumno = o;
+	public Jugador obtenerJugador(int idJugador) {
+		Jugador jugador = null;
+		for (Jugador jugadorIdx : jugadores) {
+			if (jugadorIdx.getId_jugador() == idJugador) {
+				jugador = jugadorIdx;
 				break;
 			}
 		}
-		return alumno;
+		return jugador;
 	}
 }

@@ -5,9 +5,9 @@ import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
-import dto.AlumnoDto;
+import dto.JugadorDTO;
 import excepciones.ComunicacionException;
-import interfaces.alumno.InterfaceRemota;
+import interfaces.InterfaceRemota;
 
 public class BusinessDelegate {
 
@@ -15,7 +15,7 @@ public class BusinessDelegate {
 	
 	public BusinessDelegate() throws ComunicacionException{
 		try {
-			ir = (InterfaceRemota) Naming.lookup("//127.0.0.1/altaAlumno");
+			ir = (InterfaceRemota) Naming.lookup("//127.0.0.1/altaJugador");
 		} catch (MalformedURLException e) {
 			throw new ComunicacionException("La direccion especificada no es correcta");
 		} catch (RemoteException e) {
@@ -25,9 +25,9 @@ public class BusinessDelegate {
 		}
 	}
 	
-	public void altaAlumno(AlumnoDto dto) throws ComunicacionException{
+	public void altaJugador(JugadorDTO dto) throws ComunicacionException{
 		try {
-			ir.altaAlumno(dto);
+			ir.altaJugador(dto);
 		} catch (RemoteException e) {
 			throw new ComunicacionException("Error en las comunicaciones");	
 		}

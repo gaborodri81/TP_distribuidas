@@ -1,19 +1,24 @@
-package view.alumno;
+package view;
 
 import javax.swing.JOptionPane;
 
 import delegado.alumno.BusinessDelegate;
+import dto.JugadorDTO;
 import excepciones.ComunicacionException;
 
-public class Cliente {
+public class Jugador {
 
 	public static void main(String[] args) {
 
 		try {
-			System.out.println("Dando de alta un alumno :");
+			System.out.println("Dando de alta un jugador :");
 			
 			// DTO
-			new BusinessDelegate().altaAlumno(10, 20);
+			JugadorDTO dto = new JugadorDTO();
+			dto.setId_jugador(236);
+			dto.setNickname("gaborodri");
+			BusinessDelegate business = new BusinessDelegate(); 
+			business.altaJugador(dto);
 		} catch (ComunicacionException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage());
 		}
