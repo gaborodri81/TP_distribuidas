@@ -1,4 +1,4 @@
-package delegado.alumno;
+package delegado;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
