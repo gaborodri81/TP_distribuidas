@@ -2,7 +2,7 @@ package view;
 
 import javax.swing.JOptionPane;
 
-import delegado.alumno.BusinessDelegate;
+import delegado.BusinessDelegate;
 import dto.JugadorDTO;
 import excepciones.ComunicacionException;
 
