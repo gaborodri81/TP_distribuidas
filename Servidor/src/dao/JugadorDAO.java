@@ -30,7 +30,7 @@ public class JugadorDAO {
 		
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session session = sf.openSession();
-		_JugadorEntity je = (_JugadorEntity) session.createQuery("from JugadorEntity where id.tipo = ? and id.numero = ?")
+		JugadorEntity je = (JugadorEntity) session.createQuery("from JugadorEntity where id.tipo = ? and id.numero = ?")
 					.setParameter(0, tipo)
 					.setParameter(1, numero)
 					.uniqueResult();
