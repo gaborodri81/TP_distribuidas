@@ -1,12 +1,9 @@
 package dao;
 
 import org.hibernate.Session;
-
 import org.hibernate.SessionFactory;
 
-import entities.ClubEntity;
 import entities.JugadorEntity;
-import exceptions.ClubException;
 import exceptions.JugadorException;
 import hbt.HibernateUtil;
 import negocio.Jugador;
@@ -41,15 +38,7 @@ public class JugadorDAO {
 	}
 	
 	public void grabar(Jugador jugador){
-		_JugadorEntity je = new _JugadorEntity(jugador.getTipo(), jugador.getNumero(), jugador.getNombre());
-		ClubEntity club = null;
-		try {
-			club = MazoDAO.getInstance().findByID(jugador.getClub().getIdClub());
-		} catch (ClubException e) {
-			// TODO Auto-generated catch block 
-			e.printStackTrace();
-		}
-		je.setClub(club);
+		JugadorEntity je = new JugadorEntity();
 		je.setCategoria(jugador.getCategoria());
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session session = sf.openSession();
@@ -58,19 +47,15 @@ public class JugadorDAO {
 		session.getTransaction().commit();
 		session.close();
 	}
-
-
 	
 	public Jugador toNegocio(JugadorEntity jugador) {
 		Jugador j = new Jugador();
 		j.setCategoria(jugador.getCategoria());
-		j.setId_jugador(jugador.getIdJugador());
+		j.setId_jugador(jugador.getId_jugador());
 		j.setMail(jugador.getMail());
-		j.setNickname(jugador.getNickName());
+		j.setNickname(jugador.getNickname());
 		j.setPassword(jugador.getPassword());
 		
-		Club c = MazoDAO.getInstance().toNegocio(jugador.getClub());
-		j.setClub(c);
 		return j;
 	}
 

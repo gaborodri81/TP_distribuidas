@@ -4,7 +4,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 import entities.ClubEntity;
-import entities._JugadorEntity;
+import entities.JugadorEntity;
 
 public class HibernateUtil
 {
@@ -15,7 +15,7 @@ public class HibernateUtil
         try
         {
         	 AnnotationConfiguration config = new AnnotationConfiguration();
-             config.addAnnotatedClass(_JugadorEntity.class);
+             config.addAnnotatedClass(JugadorEntity.class);
              config.addAnnotatedClass(ClubEntity.class);
              sessionFactory = config.buildSessionFactory();
         }
