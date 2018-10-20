@@ -11,9 +11,21 @@ import interfaces.InterfaceRemota;
 
 public class BusinessDelegate {
 
+	private static BusinessDelegate instance = null;
 	private InterfaceRemota ir;
-	
-	public BusinessDelegate() throws ComunicacionException{
+
+	protected BusinessDelegate() {
+		// Exists only to defeat instantiation.
+	}
+
+	public static BusinessDelegate getInstance() {
+		if (instance == null) {
+			instance = new BusinessDelegate();
+		}
+		return instance;
+	}
+
+	public void inicializar() throws ComunicacionException {
 		try {
 			ir = (InterfaceRemota) Naming.lookup("//127.0.0.1/altaJugador");
 		} catch (MalformedURLException e) {
@@ -21,33 +33,28 @@ public class BusinessDelegate {
 		} catch (RemoteException e) {
 			throw new ComunicacionException("Error en las comunicaciones");
 		} catch (NotBoundException e) {
-			throw new ComunicacionException("El servidor no esta disponible");		
+			throw new ComunicacionException("El servidor no esta disponible");
 		}
 	}
+
 	
-	public void altaJugador(JugadorDTO dto) throws ComunicacionException{
+	public boolean validarUsuario(JugadorDTO jugador) throws ComunicacionException {
+		
+		boolean inicioBien = false;
+		try {
+			inicioBien = ir.login(jugador);
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+		return inicioBien;
+	}
+	
+	public void altaJugador(JugadorDTO dto) throws ComunicacionException {
 		try {
 			ir.altaJugador(dto);
 		} catch (RemoteException e) {
-			throw new ComunicacionException("Error en las comunicaciones");	
+			throw new ComunicacionException("Error en las comunicaciones");
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

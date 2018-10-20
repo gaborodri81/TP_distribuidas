@@ -11,4 +11,6 @@ public interface InterfaceRemota extends Remote {
 	
 	// public Alumno obtener(int legajo) throws RemoteException;
 	
+	public boolean login(JugadorDTO jugador) throws RemoteException;
+	
 }
