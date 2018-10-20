@@ -1,5 +1,6 @@
 package dao;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -57,6 +58,32 @@ public class JugadorDAO {
 		j.setPassword(jugador.getPassword());
 		
 		return j;
+	}
+	
+	public Jugador buscarPorNickname(String nickname)  {
+
+		Jugador resultado = null;
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session s = sf.openSession();
+		s.beginTransaction();
+		JugadorEntity aux;
+		try {
+			aux = (JugadorEntity) s
+					.createQuery("from JugadorEntity je where je.nickname = ?")
+					.setString(0, nickname).uniqueResult();
+			
+			s.getTransaction().commit();
+			s.close();
+			
+			if (aux != null) {
+				resultado = this.toNegocio(aux);
+			} 
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			throw e;
+		}
+
+		return resultado;
 	}
 
 }
