@@ -14,6 +14,7 @@ public class Test {
 			new Server();
 			System.out.println("Servidor levantado");
 		} catch (RemoteException e) {
+			System.out.println("Mensaje Error : " + e.getMessage());
 			JOptionPane.showMessageDialog(null, "No pude arrancar el servidor");
 		}
 	}

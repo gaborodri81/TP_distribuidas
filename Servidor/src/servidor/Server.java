@@ -19,7 +19,8 @@ public class Server {
 
 		
 		try {
-			LocateRegistry.createRegistry(1099);
+			LocateRegistry.createRegistry(11099);
+		//	System.setProperty("java.rmi.server.hostname", "192.168.43.230");
 			Naming.rebind("//127.0.0.1/altaJugador", or);
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block

@@ -19,8 +19,6 @@ public class JugadorEntity {
 	private String nickname;
 	private String mail;
 	private String password;
-	@ManyToOne()
-	@JoinColumn(name="id_club")
 	private Categoria categoria;
 	private boolean mano;
 	private boolean estado;

@@ -1,7 +1,7 @@
 package dao;
 
 import hbt.HibernateUtil;
-import negocio.Club;
+
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -34,9 +34,9 @@ public class MazoDAO {
 			throw new ClubException("El club solicitado no existe");
 	}
 	
-	public Club toNegocio (ClubEntity club){
-		Club c = new Club(club.getIdClub(), club.getNombre(), club.getZona() );
-		return c;
-	}
+//	public Club toNegocio (ClubEntity club){
+	//	Club c = new Club(club.getIdClub(), club.getNombre(), club.getZona() );
+	//	return c;
+//	}
 	
 }
