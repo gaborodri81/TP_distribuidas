@@ -17,7 +17,7 @@ public class Jugador {
 			JugadorDTO dto = new JugadorDTO();
 			dto.setId_jugador(236);
 			dto.setNickname("gaborodri");
-			BusinessDelegate business = new BusinessDelegate(); 
+			BusinessDelegate business = BusinessDelegate.getInstance(); 
 			business.altaJugador(dto);
 		} catch (ComunicacionException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage());

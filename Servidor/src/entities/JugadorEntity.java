@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -11,16 +12,16 @@ import javax.persistence.Table;
 import dto.JugadorDTO;
 import negocio.Categoria;
 @Entity
-@Table(name="jugadores")
+@Table(name="Jugador")
 public class JugadorEntity {
 
-	@EmbeddedId
+	@Id
 	private int id_jugador;
 	private String nickname;
 	private String mail;
-	private String password;
-	private Categoria categoria;
-	private boolean mano;
+	private String clave;
+	private int id_categoria; //cambiar por la clase
+	//private boolean mano;
 	private boolean estado;
 	private int puntos;
 	private int partidasJugadas;
@@ -50,29 +51,22 @@ public class JugadorEntity {
 		this.mail = mail;
 	}
 
-	public String getPassword() {
-		return password;
-	}
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+//	public int getCategoria() {
+//		return id_categoria;
+//	}
+//
+//	public void setCategoria(Categoria categoria) {
+//		this.id_categoria = categoria;
+//	}
 
-	public Categoria getCategoria() {
-		return categoria;
-	}
+//	public boolean isMano() {
+//		return mano;
+//	}
 
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
-	}
-
-	public boolean isMano() {
-		return mano;
-	}
-
-	public void setMano(boolean mano) {
-		this.mano = mano;
-	}
+//	public void setMano(boolean mano) {
+//		this.mano = mano;
+//	}
 
 	public boolean isEstado() {
 		return estado;
@@ -114,6 +108,22 @@ public class JugadorEntity {
 		jugador.setNickname(jugadorDTO.getNickname());
 		jugador.setId_jugador(jugador.getId_jugador());
 		return jugador;
+	}
+
+	public String getClave() {
+		return clave;
+	}
+
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
+
+	public int getId_categoria() {
+		return id_categoria;
+	}
+
+	public void setId_categoria(int id_categoria) {
+		this.id_categoria = id_categoria;
 	}
 
 }

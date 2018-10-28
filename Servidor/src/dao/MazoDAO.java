@@ -6,8 +6,8 @@ import hbt.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import entities.ClubEntity;
-import exceptions.ClubException;
+
+
 
 public class MazoDAO {
 
@@ -21,18 +21,18 @@ public class MazoDAO {
 		return instancia;
 	}
 
-	public ClubEntity findByID(Integer idClub) throws ClubException {
-		SessionFactory sf = HibernateUtil.getSessionFactory();
-		Session session = sf.openSession();
-		ClubEntity ce = (ClubEntity) session.createQuery("from ClubEntity where id = ?")
-					.setParameter(0, idClub)
-					.uniqueResult();
-		if(ce != null){
-			return ce;
-		}
-		else 
-			throw new ClubException("El club solicitado no existe");
-	}
+//	public ClubEntity findByID(Integer idClub) throws ClubException {
+//		SessionFactory sf = HibernateUtil.getSessionFactory();
+//		Session session = sf.openSession();
+//		ClubEntity ce = (ClubEntity) session.createQuery("from ClubEntity where id = ?")
+//					.setParameter(0, idClub)
+//					.uniqueResult();
+//		if(ce != null){
+//			return ce;
+//		}
+//		else 
+//			throw new ClubException("El club solicitado no existe");
+//	}
 	
 //	public Club toNegocio (ClubEntity club){
 	//	Club c = new Club(club.getIdClub(), club.getNombre(), club.getZona() );

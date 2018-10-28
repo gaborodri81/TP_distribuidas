@@ -12,36 +12,38 @@ import interfaces.InterfaceRemota;
 public class BusinessDelegate {
 
 	private static BusinessDelegate instance = null;
-	private InterfaceRemota ir;
+	private static InterfaceRemota ir;
 
 	protected BusinessDelegate() {
 		// Exists only to defeat instantiation.
 	}
 
-	public static BusinessDelegate getInstance() {
+	public static BusinessDelegate getInstance() throws ComunicacionException {
 		if (instance == null) {
 			instance = new BusinessDelegate();
+	
 		}
 		return instance;
 	}
 
-	public void inicializar() throws ComunicacionException {
-		try {
-			ir = (InterfaceRemota) Naming.lookup("//127.0.0.1/altaJugador");
-		} catch (MalformedURLException e) {
-			throw new ComunicacionException("La direccion especificada no es correcta");
-		} catch (RemoteException e) {
-			throw new ComunicacionException("Error en las comunicaciones");
-		} catch (NotBoundException e) {
-			throw new ComunicacionException("El servidor no esta disponible");
-		}
-	}
+	
 
 	
 	public boolean validarUsuario(JugadorDTO jugador) throws ComunicacionException {
 		
 		boolean inicioBien = false;
 		try {
+			if (ir == null){
+				try {
+					ir = (InterfaceRemota) Naming.lookup("//127.0.0.1/altaJugador");
+				} catch (MalformedURLException e) {
+					throw new ComunicacionException("La direccion especificada no es correcta");
+				} catch (RemoteException e) {
+					throw new ComunicacionException("Error en las comunicaciones");
+				} catch (NotBoundException e) {
+					throw new ComunicacionException("El servidor no esta disponible");
+				}			
+			}
 			inicioBien = ir.login(jugador);
 		} catch (RemoteException e) {
 			e.printStackTrace();

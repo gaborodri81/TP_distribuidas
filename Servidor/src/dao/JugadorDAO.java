@@ -40,7 +40,7 @@ public class JugadorDAO {
 	
 	public void grabar(Jugador jugador){
 		JugadorEntity je = new JugadorEntity();
-		je.setCategoria(jugador.getCategoria());
+	//	je.setCategoria(jugador.getCategoria());
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session session = sf.openSession();
 		session.beginTransaction();
@@ -51,11 +51,11 @@ public class JugadorDAO {
 	
 	public Jugador toNegocio(JugadorEntity jugador) {
 		Jugador j = new Jugador();
-		j.setCategoria(jugador.getCategoria());
+//		j.setCategoria(jugador.getCategoria());
 		j.setId_jugador(jugador.getId_jugador());
 		j.setMail(jugador.getMail());
 		j.setNickname(jugador.getNickname());
-		j.setPassword(jugador.getPassword());
+		j.setPassword(jugador.getClave());
 		
 		return j;
 	}

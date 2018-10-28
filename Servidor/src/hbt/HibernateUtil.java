@@ -3,7 +3,7 @@ package hbt;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-import entities.ClubEntity;
+
 import entities.JugadorEntity;
 
 public class HibernateUtil
@@ -16,7 +16,6 @@ public class HibernateUtil
         {
         	 AnnotationConfiguration config = new AnnotationConfiguration();
              config.addAnnotatedClass(JugadorEntity.class);
-             config.addAnnotatedClass(ClubEntity.class);
              sessionFactory = config.buildSessionFactory();
         }
         catch (Throwable ex)
