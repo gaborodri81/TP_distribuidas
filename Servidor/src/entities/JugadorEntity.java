@@ -1,16 +1,10 @@
 package entities;
 
-import java.util.Collection;
-
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import dto.JugadorDTO;
-import negocio.Categoria;
 @Entity
 @Table(name="Jugador")
 public class JugadorEntity {
