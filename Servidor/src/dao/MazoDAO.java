@@ -1,14 +1,5 @@
 package dao;
 
-import hbt.HibernateUtil;
-
-
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-
-
-
-
 public class MazoDAO {
 
 	private static MazoDAO instancia;
