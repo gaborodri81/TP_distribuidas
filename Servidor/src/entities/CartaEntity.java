@@ -1,6 +1,6 @@
 package entities;
 
-public class Carta {
+public class CartaEntity {
 
 	private Long idCarta;
 	private Long valor;
@@ -38,17 +38,6 @@ public class Carta {
 	public void setJugada(Boolean jugada) {
 		this.jugada = jugada;
 	}
-	
-	public void guardarCarta(){
-		// @TODO 
-	}
-	
-	public void eliminarCarta(){
-		// @TODO
-	}
-	
-	public void jugarCarta(){
-		// @TODO
-	}
+
 
 }

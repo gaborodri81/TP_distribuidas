@@ -1,6 +1,6 @@
 package entities;
 
-public class Categoria {
+public class CategoriaEntity {
 
 	private String tipo;
 	private String nombre;
@@ -39,7 +39,5 @@ public class Categoria {
 		this.partidasMinimo = partidasMinimo;
 	}
 
-	public void guardarCategoria(){
-		// @TODO !
-	}
+	
 }

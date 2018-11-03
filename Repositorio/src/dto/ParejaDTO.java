@@ -1,13 +1,13 @@
-package negocio;
+package dto;
 
 import java.util.Collection;
 
-public class Pareja {
+public class ParejaDTO {
 	
 	private int id_pareja;
-	private Collection<Jugador> jugadores;
-	private Categoria categoria;
-	private boolean mano;
+	private Collection<JugadorDTO> jugadores;
+	private CategoriaDTO categoria;
+	private Boolean mano;
 	private int puntosPartidaActual;
 	private int puntosHistorico;
 	public int getId_pareja() {
@@ -16,16 +16,16 @@ public class Pareja {
 	public void setId_pareja(int id_pareja) {
 		this.id_pareja = id_pareja;
 	}
-	public Collection<Jugador> getJugadores() {
+	public Collection<JugadorDTO> getJugadores() {
 		return jugadores;
 	}
-	public void setJugadores(Collection<Jugador> jugadores) {
+	public void setJugadores(Collection<JugadorDTO> jugadores) {
 		this.jugadores = jugadores;
 	}
-	public Categoria getCategoria() {
+	public CategoriaDTO getCategoria() {
 		return categoria;
 	}
-	public void setCategoria(Categoria categoria) {
+	public void setCategoria(CategoriaDTO categoria) {
 		this.categoria = categoria;
 	}
 	public boolean isMano() {
@@ -46,13 +46,6 @@ public class Pareja {
 	public void setPuntosHistorico(int puntosHistorico) {
 		this.puntosHistorico = puntosHistorico;
 	}
-	
-
-	public void guardarPareja(){
-		// @TODO 
-	}
-	
-	
 	
 
 }

@@ -3,12 +3,12 @@ package entities;
 import java.util.Date;
 import java.util.List;
 
-public class Partida {
+public class PartidaEntity {
 
 	private Date fechaInicio;
 	private Date fechaFin;
-	private List<Pareja> parejasPartida;
-	private List<TipoEnvite> envitesPartida;
+	private List<ParejaEntity> parejasPartida;
+	private List<TipoEnviteEntity> envitesPartida;
 	public Date getFechaInicio() {
 		return fechaInicio;
 	}
@@ -21,30 +21,17 @@ public class Partida {
 	public void setFechaFin(Date fechaFin) {
 		this.fechaFin = fechaFin;
 	}
-	public List<Pareja> getParejasPartida() {
+	public List<ParejaEntity> getParejasPartida() {
 		return parejasPartida;
 	}
-	public void setParejasPartida(List<Pareja> parejasPartida) {
+	public void setParejasPartida(List<ParejaEntity> parejasPartida) {
 		this.parejasPartida = parejasPartida;
 	}
-	public List<TipoEnvite> getEnvitesPartida() {
+	public List<TipoEnviteEntity> getEnvitesPartida() {
 		return envitesPartida;
 	}
-	public void setEnvitesPartida(List<TipoEnvite> envitesPartida) {
+	public void setEnvitesPartida(List<TipoEnviteEntity> envitesPartida) {
 		this.envitesPartida = envitesPartida;
-	}
-	
-	public Long controlarEnvites(String tipoEnvite) {
-		
-		// @ TODO
-		
-		return null;
-	}
-	
-	public Boolean controlarBaza(){
-		// @TODO 
-		
-		return null;
 	}
 	
 	

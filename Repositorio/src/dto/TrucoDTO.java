@@ -1,6 +1,6 @@
-package entities;
+package dto;
 
-public class Truco extends TipoEnvite {
+public class TrucoDTO extends TipoEnviteDTO {
 
 	private Long puntosTruco;
 
@@ -10,9 +10,5 @@ public class Truco extends TipoEnvite {
 
 	public void setPuntosTruco(Long puntosFaltaEnvido) {
 		this.puntosTruco = puntosFaltaEnvido;
-	}
-	
-	public void cantarTruco(){
-		// @TODO
 	}
 }

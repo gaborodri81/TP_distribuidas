@@ -9,7 +9,7 @@ public class Partida {
 	private Date FechaFin;
 	private Jugador JugadorTurno;
 	private Collection<Pareja> Parejas;
-	private Collection<Envite> Envites;
+	private Collection<TipoEnvite> Envites;
 	public Date getFechaincio() {
 		return Fechaincio;
 	}
@@ -34,15 +34,26 @@ public class Partida {
 	public void setParejas(Collection<Pareja> parejas) {
 		Parejas = parejas;
 	}
-	public Collection<Envite> getEnvites() {
+	public Collection<TipoEnvite> getEnvites() {
 		return Envites;
 	}
-	public void setEnvites(Collection<Envite> envites) {
+	public void setEnvites(Collection<TipoEnvite> envites) {
 		Envites = envites;
 	}
 	
 	
+	public Long controlarEnvites(String tipoEnvite) {
+		
+		// @ TODO
+		
+		return null;
+	}
 	
+	public Boolean controlarBaza(){
+		// @TODO 
+		
+		return null;
+	}
 	
 	
 	

@@ -38,5 +38,7 @@ public class Categoria {
 	public void setPartidasMin(int partidasMin) {
 		this.partidasMin = partidasMin;
 	}
-
+	public void guardarCategoria(){
+		// @TODO !
+	}
 }

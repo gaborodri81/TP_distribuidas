@@ -1,6 +1,6 @@
 package entities;
 
-public abstract class TipoEnvite {
+public abstract class TipoEnviteEntity {
 
 	private Long idEnvite;
 	private String estado;

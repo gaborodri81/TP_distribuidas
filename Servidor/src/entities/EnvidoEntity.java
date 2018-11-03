@@ -2,7 +2,7 @@ package entities;
 
 import java.util.List;
 
-public class Envido extends TipoEnvite {
+public class EnvidoEntity extends TipoEnviteEntity {
 
 	private Long puntosEnvido;
 
@@ -14,8 +14,5 @@ public class Envido extends TipoEnvite {
 		this.puntosEnvido = puntosFaltaEnvido;
 	}
 	
-	public Long calcularEnvido( List<Pareja> parejasPartida){
-		// @TODO
-		return null;
-	}
+	
 }

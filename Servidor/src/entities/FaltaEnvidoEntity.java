@@ -1,6 +1,6 @@
 package entities;
 
-public class FaltaEnvido extends TipoEnvite {
+public class FaltaEnvidoEntity extends TipoEnviteEntity {
 
 	private Long puntosFaltaEnvido;
 
@@ -10,9 +10,5 @@ public class FaltaEnvido extends TipoEnvite {
 
 	public void setPuntosFaltaEnvido(Long puntosFaltaEnvido) {
 		this.puntosFaltaEnvido = puntosFaltaEnvido;
-	}
-	
-	public void cantarFaltaEnvido(){
-		// @TODO
 	}
 }

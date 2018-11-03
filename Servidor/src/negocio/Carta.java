@@ -50,5 +50,18 @@ public class Carta {
 	public void setJugada(boolean jugada) {
 		this.jugada = jugada;
 	}
+	
+	
+	public void guardarCarta(){
+		// @TODO 
+	}
+	
+	public void eliminarCarta(){
+		// @TODO
+	}
+	
+	public void jugarCarta(){
+		// @TODO
+	}
 
 }

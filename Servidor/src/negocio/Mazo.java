@@ -4,14 +4,14 @@ import java.util.Collection;
 
 public class Mazo {
 	
-	private Collection<Carta> CartasPendientas;
+	private Collection<Carta> cartasPendientas;
 	private Collection<Carta> cartasRepartidas;
 	
 	public Collection<Carta> getCartasPendientas() {
-		return CartasPendientas;
+		return cartasPendientas;
 	}
 	public void setCartasPendientas(Collection<Carta> cartasPendientas) {
-		CartasPendientas = cartasPendientas;
+		this.cartasPendientas = cartasPendientas;
 	}
 	public Collection<Carta> getCartasRepartidas() {
 		return cartasRepartidas;

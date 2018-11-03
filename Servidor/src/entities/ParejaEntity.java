@@ -4,11 +4,11 @@ import java.util.List;
 
 import negocio.Jugador;
 
-public class Pareja {
+public class ParejaEntity {
 
 	private Long idPareja;
 	private List<Jugador> jugadores;
-	private Categoria categoriaPareja;
+	private CategoriaEntity categoriaPareja;
 	private Boolean mano;
 	private Long puntosPartidaActual;
 	private Long puntosHistorico;
@@ -29,11 +29,11 @@ public class Pareja {
 		this.jugadores = jugadores;
 	}
 
-	public Categoria getCategoriaPareja() {
+	public CategoriaEntity getCategoriaPareja() {
 		return categoriaPareja;
 	}
 
-	public void setCategoriaPareja(Categoria categoriaPareja) {
+	public void setCategoriaPareja(CategoriaEntity categoriaPareja) {
 		this.categoriaPareja = categoriaPareja;
 	}
 
@@ -62,7 +62,4 @@ public class Pareja {
 	}
 
 	
-	public void guardarPareja(){
-		// @TODO 
-	}
 }
