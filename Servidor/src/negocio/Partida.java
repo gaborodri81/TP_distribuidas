@@ -1,44 +1,46 @@
 package negocio;
 
-import java.sql.Date;
 import java.util.Collection;
+import java.util.Date;
 
 public class Partida {
  
-	private Date Fechaincio;
-	private Date FechaFin;
-	private Jugador JugadorTurno;
-	private Collection<Pareja> Parejas;
-	private Collection<TipoEnvite> Envites;
-	public Date getFechaincio() {
-		return Fechaincio;
+	private Date fechaIncio;
+	private Date fechaFin;
+	private Jugador jugadorTurno;
+	private Collection<Pareja> parejas;
+	private Collection<TipoEnvite> envites;
+	
+	
+	public Date getFechaIncio() {
+		return fechaIncio;
 	}
-	public void setFechaincio(Date fechaincio) {
-		Fechaincio = fechaincio;
+	public void setFechaIncio(Date fechaincio) {
+		fechaIncio = fechaincio;
 	}
 	public Date getFechaFin() {
-		return FechaFin;
+		return fechaFin;
 	}
 	public void setFechaFin(Date fechaFin) {
-		FechaFin = fechaFin;
+		this.fechaFin = fechaFin;
 	}
 	public Jugador getJugadorTurno() {
-		return JugadorTurno;
+		return jugadorTurno;
 	}
 	public void setJugadorTurno(Jugador jugadorTurno) {
-		JugadorTurno = jugadorTurno;
+		this.jugadorTurno = jugadorTurno;
 	}
 	public Collection<Pareja> getParejas() {
-		return Parejas;
+		return parejas;
 	}
 	public void setParejas(Collection<Pareja> parejas) {
-		Parejas = parejas;
+		this.parejas = parejas;
 	}
 	public Collection<TipoEnvite> getEnvites() {
-		return Envites;
+		return envites;
 	}
 	public void setEnvites(Collection<TipoEnvite> envites) {
-		Envites = envites;
+		this.envites = envites;
 	}
 	
 	

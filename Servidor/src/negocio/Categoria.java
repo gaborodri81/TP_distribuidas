@@ -6,6 +6,7 @@ public class Categoria {
 	private String nombre;
 	private int puntajeMin;
 	private int partidasMin;
+	private Integer order;
 
 	public String getTipo() {
 		return tipo;
@@ -40,5 +41,13 @@ public class Categoria {
 	}
 	public void guardarCategoria(){
 		// @TODO !
+	}
+
+	public Integer getOrder() {
+		return order;
+	}
+
+	public void setOrder(Integer order) {
+		this.order = order;
 	}
 }

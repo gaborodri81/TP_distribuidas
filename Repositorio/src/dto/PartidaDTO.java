@@ -5,40 +5,42 @@ import java.util.Collection;
 
 public class PartidaDTO {
  
-	private Date Fechaincio;
-	private Date FechaFin;
-	private JugadorDTO JugadorTurno;
-	private Collection<ParejaDTO> Parejas;
-	private Collection<TipoEnviteDTO> Envites;
-	public Date getFechaincio() {
-		return Fechaincio;
+	private Date fechaIncio;
+	private Date fechaFin;
+	private JugadorDTO jugadorTurno;
+	private Collection<ParejaDTO> parejas;
+	private Collection<TipoEnviteDTO> envites;
+	public Date getFechaIncio() {
+		return fechaIncio;
 	}
-	public void setFechaincio(Date fechaincio) {
-		Fechaincio = fechaincio;
+	public void setFechaIncio(Date fechaIncio) {
+		this.fechaIncio = fechaIncio;
 	}
 	public Date getFechaFin() {
-		return FechaFin;
+		return fechaFin;
 	}
 	public void setFechaFin(Date fechaFin) {
-		FechaFin = fechaFin;
+		this.fechaFin = fechaFin;
 	}
 	public JugadorDTO getJugadorTurno() {
-		return JugadorTurno;
+		return jugadorTurno;
 	}
 	public void setJugadorTurno(JugadorDTO jugadorTurno) {
-		JugadorTurno = jugadorTurno;
+		this.jugadorTurno = jugadorTurno;
 	}
 	public Collection<ParejaDTO> getParejas() {
-		return Parejas;
+		return parejas;
 	}
 	public void setParejas(Collection<ParejaDTO> parejas) {
-		Parejas = parejas;
+		this.parejas = parejas;
 	}
 	public Collection<TipoEnviteDTO> getEnvites() {
-		return Envites;
+		return envites;
 	}
 	public void setEnvites(Collection<TipoEnviteDTO> envites) {
-		Envites = envites;
+		this.envites = envites;
 	}
+	
+	
 	
 }

@@ -6,6 +6,7 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
 import dto.JugadorDTO;
+import dto.PartidaDTO;
 import excepciones.ComunicacionException;
 import interfaces.InterfaceRemota;
 
@@ -57,6 +58,10 @@ public class BusinessDelegate {
 		} catch (RemoteException e) {
 			throw new ComunicacionException("Error en las comunicaciones");
 		}
+	}
+	
+	public PartidaDTO gestionarLibreIndividual (JugadorDTO jug) throws RemoteException {
+		
 	}
 
 }

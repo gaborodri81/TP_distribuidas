@@ -21,6 +21,13 @@ public class Pareja {
 	}
 	public void setJugadores(Collection<Jugador> jugadores) {
 		this.jugadores = jugadores;
+		Categoria categoria = null;
+		for (Jugador jugador : jugadores){
+			if (categoria == null || categoria.getOrder()<jugador.getCategoria().getOrder()){
+				categoria = jugador.getCategoria();
+			}
+		}
+		this.categoria = categoria;
 	}
 	public Categoria getCategoria() {
 		return categoria;
